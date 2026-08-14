@@ -57,24 +57,17 @@
     <div class="card">
         <h1>تحميل دليل العناية بالذات المجاني 📖</h1>
         <p>اضغط على الزر أسفله للتحميل المباشر وتأكيد العملية.</p>
-        <a href="#" id="downloadBtn" class="download-btn">Download Free PDF Guide</a>
+        
+        <!-- هنا حطينا رابط Adsterra مباشرة -->
+        <a href="https://www.google.com" target="_blank" id="downloadBtn" class="download-btn">Download Free PDF Guide</a>
     </div>
 
     <script>
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // 1. رابط Adsterra Direct Link (حط الرابط ديالك هنا بين القوسين)
-            var adsterraLink = "https://www.google.com"; 
-
-            // 2. اسم ملف الـ PDF كما هو مسمى تماماً فـ GitHub
-            var pdfFileName = "./Self-care-guide-2025.pdf";
-
-            // فتح إعلان Adsterra فـ tab جديد
-            window.open(adsterraLink, '_blank');
-
-            // بدء تحميل الملف فـ نفس الصفحة
-            window.location.href = pdfFileName;
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // كينزل الملف فـ النافذة الأصلية بعد نص ثانية من الضغط
+            setTimeout(function() {
+                window.location.href = "./Self-care-guide-2025.pdf";
+            }, 500);
         });
     </script>
 
